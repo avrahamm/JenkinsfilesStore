@@ -13,7 +13,13 @@ pipeline {
                   echo 'Info..'
                   sh 'ls -la my-software'
               }
-          }
+        }
+        stage('Cleaning') {
+              steps {
+                  echo 'Cleaning..'
+                  sh 'rm -rf my-software'
+              }
+        }
 
     }
 }
