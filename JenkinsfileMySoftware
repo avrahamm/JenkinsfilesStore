@@ -1,0 +1,19 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Building..'
+                sh 'git clone https://github.com/avrahamm/MySoftware.git my-software'
+            }
+        }
+        stage('Info') {
+              steps {
+                  echo 'Info..'
+                  sh 'ls -la my-software'
+              }
+          }
+
+    }
+}
